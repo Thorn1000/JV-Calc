@@ -49,7 +49,7 @@ def jv():
     with open("nations.txt", "r") as in_file:   #lines 48-68 were written by UPC, lines 70-73 were modified
         nations = in_file.read().strip('\n').split('\n')
         for nation in nations:
-            deck_request = bs(requests.get(f"https://www.nationstates.net/cgi-bin/api.cgi?q=cards+deck;nationname="f"{nation.lower().replace(' ', '_')}", headers=headers).text, "xml").find_all("CARD")
+            deck_request = bs(requests.get(f"https://www.nationstates.net/cgi-bin/api.cgi?q=cards+deck;nationname={nation.lower().replace(' ', '_')}", headers=headers).text, "xml").find_all("CARD")
 
             jv = 0
 
