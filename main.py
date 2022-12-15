@@ -95,6 +95,7 @@ while started:
     answer = input("Do you want to run this code? 1 for yes and 2 for no \n")  
     if answer == "1": 
         jv()    #runs code
+        exit() #we need this to break the while loop
     elif answer == "2":
         print("Exiting...")
         exit() #exits
